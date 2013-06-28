@@ -6,6 +6,7 @@ Group:          System/Shells
 License:        BSD and GPLv2+
 URL:            http://gondor.apana.org.au/~herbert/dash/
 Source0:        http://gondor.apana.org.au/~herbert/dash/files/dash-%{version}.tar.gz
+Source1001: 	dash.manifest
 
 %description
 DASH is a POSIX-compliant implementation of /bin/sh that aims to be as small as
@@ -14,6 +15,7 @@ significantly faster than bash (the GNU Bourne-Again SHell) for most tasks.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure
@@ -34,6 +36,7 @@ if [ $1 -eq 0 ]; then
 fi
 
 %files
+%manifest %{name}.manifest
 %doc  COPYING
 /bin/dash
 %{_datadir}/man/man1/dash.1.gz
