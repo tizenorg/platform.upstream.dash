@@ -1,0 +1,6 @@
+* Thu Sep 05 2013 Maciej Wereski <m.wereski@partner.samsung.com> accepted/tizen/20130710.220938@1e64104
+- RMPLINT fixes and docs package
+- resetting manifest requested domain to floor
+- add packaging
+- Imported Upstream version 0.5.7
+

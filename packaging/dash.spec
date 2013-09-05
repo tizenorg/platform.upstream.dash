@@ -2,8 +2,8 @@ Name:           dash
 Version:        0.5.7
 Release:        4
 Summary:        Small and fast POSIX-compliant shell
-Group:          System/Shells
-License:        BSD and GPLv2+
+Group:          Base/Utilities
+License:        BSD-3-Clause and GPL-2.0+
 URL:            http://gondor.apana.org.au/~herbert/dash/
 Source0:        http://gondor.apana.org.au/~herbert/dash/files/dash-%{version}.tar.gz
 Source1001: 	dash.manifest
@@ -35,9 +35,10 @@ if [ $1 -eq 0 ]; then
     sed -i '/^\/bin\/dash$/d' /etc/shells
 fi
 
+%docs_package
+
 %files
 %manifest %{name}.manifest
-%doc  COPYING
+%license COPYING
 /bin/dash
-%{_datadir}/man/man1/dash.1.gz
 
