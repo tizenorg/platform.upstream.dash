@@ -18,6 +18,9 @@ significantly faster than bash (the GNU Bourne-Again SHell) for most tasks.
 cp %{SOURCE1001} .
 
 %build
+export CFLAGS+=" -fvisibility=hidden"
+  export CXXFLAGS+=" -fvisibility=hidden"
+  
 %configure
 make %{?_smp_mflags}
 
